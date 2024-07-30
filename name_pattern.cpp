@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 void print_a(int h, int i);
@@ -30,107 +30,133 @@ void print_y(int h, int i);
 void print_z(int h, int i);
 
 int main(){
-  int height = 6;
-  for (int i = 0; i < height; i++)
-  {
-    print_a(height, i);
-    cout << "  ";
-    print_b(height, i);
-    cout << "  ";
-    print_c(height, i);
-    cout << "  ";
-    print_d(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
-  for (int i = 0; i < height; i++)
-  {
-     print_e(height, i);
-    cout << "  ";
-    print_f(height, i);
-    cout << "  ";
-    print_g(height, i);
-    cout << "  ";
-    print_h(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
-  for (int i = 0; i < height; i++)
-  {
-    print_i(height, i);
-    cout << "  ";
-    print_j(height, i);
-    cout << "  ";
-    print_k(height, i);
-    cout << "  ";
-    print_l(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
-  for (int i = 0; i < height; i++)
-  {
-    print_m(height, i);
-    cout << "  ";
-    print_n(height, i);
-    cout << "  ";
-    print_o(height, i);
-    cout << "  ";
-    print_p(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
-  for (int i = 0; i < height; i++)
-  {
-    print_q(height, i);
-    cout << "  ";
-    print_r(height, i);
-    cout << "  ";
-    print_s(height, i);
-    cout << "  ";
-    print_t(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
-  for (int i = 0; i < height; i++)
-  {
-    print_u(height, i);
-    cout << "  ";
-    print_v(height, i);
-    cout << "  ";
-    print_w(height, i);
-    cout << "  ";
-
-    cout << endl;
-  }
-
-  cout << endl;
+  int height;
+  cout << "enter the height you want for the letters : ";
+  cin >> height;
+  string name;
+  cout << "enter your Name : ";
+  cin >> name;
 
   for (int i = 0; i < height; i++)
   {
-    print_x(height, i);
-    cout << "  ";
-    print_y(height, i);
-    cout << "  ";
-    print_z(height, i);
-
+    for (int a = 0, len = name.length(); a < len; a++)
+    {
+      switch (name[a])
+      {
+        case 'a':
+        case 'A':
+          print_a(height, i);
+          break;
+        case 'b':
+        case 'B':
+          print_b(height, i);
+          break;
+        case 'c':
+        case 'C':
+          print_c(height, i);
+          break;
+        case 'd':
+        case 'D':
+          print_d(height, i);
+          break;
+        case 'e':
+        case 'E':
+          print_e(height, i);
+          break;
+        case 'f':
+        case 'F':
+          print_f(height, i);
+          break;
+        case 'g':
+        case 'G':
+          print_g(height, i);
+          break;
+        case 'h':
+        case 'H':
+          print_h(height, i);
+          break;
+        case 'i':
+        case 'I':
+          print_i(height, i);
+          break;
+        case 'j':
+        case 'J':
+          print_j(height, i);
+          break;
+        case 'k':
+        case 'K':
+          print_k(height, i);
+          break;
+        case 'l':
+        case 'L':
+          print_l(height, i);
+          break;
+        case 'm':
+        case 'M':
+          print_m(height, i);
+          break;
+        case 'n':
+        case 'N':
+          print_n(height, i);
+          break;
+        case 'o':
+        case 'O':
+          print_o(height, i);
+          break;
+        case 'p':
+        case 'P':
+          print_p(height, i);
+          break;
+        case 'q':
+        case 'Q':
+          print_q(height, i);
+          break;
+        case 'r':
+        case 'R':
+          print_r(height, i);
+          break;
+        case 's':
+        case 'S':
+          print_s(height, i);
+          break;
+        case 't':
+        case 'T':
+          print_t(height, i);
+          break;
+        case 'u':
+        case 'U':
+          print_u(height, i);
+          break;
+        case 'v':
+        case 'V':
+          print_v(height, i);
+          break;
+        case 'w':
+        case 'W':
+          print_w(height, i);
+          break;
+        case 'x':
+        case 'X':
+          print_x(height, i);
+          break;
+        case 'y':
+        case 'Y':
+          print_y(height, i);
+          break;
+        case 'z':
+        case 'Z':
+          print_z(height, i);
+          break;
+        
+        default:
+          cout << "some error occured";
+          break;
+      }
+      cout << "  ";
+    }
     cout << endl;
   }
-  
+   
 
 }
 
