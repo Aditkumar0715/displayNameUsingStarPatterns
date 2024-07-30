@@ -41,7 +41,14 @@ int main(){
     cout << "  ";
     print_d(height, i);
     cout << "  ";
-    print_e(height, i);
+
+    cout << endl;
+  }
+
+  cout << endl;
+  for (int i = 0; i < height; i++)
+  {
+     print_e(height, i);
     cout << "  ";
     print_f(height, i);
     cout << "  ";
@@ -49,23 +56,64 @@ int main(){
     cout << "  ";
     print_h(height, i);
     cout << "  ";
+
+    cout << endl;
+  }
+
+  cout << endl;
+  for (int i = 0; i < height; i++)
+  {
     print_i(height, i);
     cout << "  ";
     print_j(height, i);
     cout << "  ";
     print_k(height, i);
     cout << "  ";
-    // print_l(height, i);
-    // cout << "  ";
-    // print_m(height, i);
-    // cout << "  ";
-    // print_n(height, i);
-    // cout << "  ";
-    // print_o(height, i);
-    // cout << "  ";
-    // print_p(height, i);
-    // cout << "  ";
+    print_l(height, i);
+    cout << "  ";
 
+    cout << endl;
+  }
+
+  cout << endl;
+  for (int i = 0; i < height; i++)
+  {
+    print_m(height, i);
+    cout << "  ";
+    print_n(height, i);
+    cout << "  ";
+    print_o(height, i);
+    cout << "  ";
+    print_p(height, i);
+    cout << "  ";
+
+    cout << endl;
+  }
+
+  cout << endl;
+  for (int i = 0; i < height; i++)
+  {
+    print_q(height, i);
+    cout << "  ";
+    print_r(height, i);
+    cout << "  ";
+    print_s(height, i);
+    cout << "  ";
+    print_t(height, i);
+    cout << "  ";
+
+    cout << endl;
+  }
+
+  cout << endl;
+  for (int i = 0; i < height; i++)
+  {
+    print_u(height, i);
+    cout << "  ";
+    print_v(height, i);
+    cout << "  ";
+    print_w(height, i);
+    cout << "  ";
 
     cout << endl;
   }
@@ -74,29 +122,11 @@ int main(){
 
   for (int i = 0; i < height; i++)
   {
-
-
-    print_q(height, i);
+    print_x(height, i);
     cout << "  ";
-
-
-    print_r(height, i);
+    print_y(height, i);
     cout << "  ";
-    print_s(height, i);
-    cout << "  ";
-    print_t(height, i);
-    cout << "  ";
-    print_u(height, i);
-    cout << "  ";
-    // print_v(height, i);
-    // cout << "  ";
-    // print_w(height, i);
-    // cout << "  ";
-    // print_x(height, i);
-    // cout << "  ";
-    // print_y(height, i);
-    // cout << "  ";
-    // print_z(height, i);
+    print_z(height, i);
 
     cout << endl;
   }
@@ -405,13 +435,14 @@ void print_s(int h, int i){
 void print_t(int h, int i){
   for (int j = 0; j < h; j++)
   {
+    int mid = (h%2 == 0) ? h/2 -1 : h/2; 
     // top bar of T
     if(i == 0){
       // for printing space in the odd location
       (j%2 == 0) ? cout << "*" : cout << " ";
     }
     // for the middle bar |
-    else if(j == h/2){
+    else if(j == mid){
       cout << "*";
     }
     else{
@@ -502,9 +533,8 @@ void print_x(int h, int i){
 void print_y(int h, int i){
   for (int j = 0; j < h; j++)
   {
-    if ((i == j and i <= h/2) or  /* for top left tilted bar \  */
-        (i + j == h - 1 and i <= h/2) or  /* for top right tilted bar /  */
-        (j == h/2 and i > h/2))    // for middle bar |
+    if ((i == j and i <= h/2 -1) or  /* for top left tilted bar \  */
+        (i + j == h - 1) )   /* for top right tilted bar /  */
     {
       cout << "*";
     }
