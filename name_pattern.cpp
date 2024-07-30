@@ -30,31 +30,31 @@ void print_y(int h, int i);
 void print_z(int h, int i);
 
 int main(){
-  int height = 20;
+  int height = 6;
   for (int i = 0; i < height; i++)
   {
-    // print_a(height, i);
-    // cout << "  ";
-    // print_b(height, i);
-    // cout << "  ";
-    // print_c(height, i);
-    // cout << "  ";
-    // print_d(height, i);
-    // cout << "  ";
-    // print_e(height, i);
-    // cout << "  ";
-    // print_f(height, i);
-    // cout << "  ";
-    // print_g(height, i);
-    // cout << "  ";
-    // print_h(height, i);
-    // cout << "  ";
-    // print_i(height, i);
-    // cout << "  ";
-    // print_j(height, i);
-    // cout << "  ";
-    // print_k(height, i);
-    // cout << "  ";
+    print_a(height, i);
+    cout << "  ";
+    print_b(height, i);
+    cout << "  ";
+    print_c(height, i);
+    cout << "  ";
+    print_d(height, i);
+    cout << "  ";
+    print_e(height, i);
+    cout << "  ";
+    print_f(height, i);
+    cout << "  ";
+    print_g(height, i);
+    cout << "  ";
+    print_h(height, i);
+    cout << "  ";
+    print_i(height, i);
+    cout << "  ";
+    print_j(height, i);
+    cout << "  ";
+    print_k(height, i);
+    cout << "  ";
     // print_l(height, i);
     // cout << "  ";
     // print_m(height, i);
@@ -80,14 +80,14 @@ int main(){
     cout << "  ";
 
 
-    // print_r(height, i);
-    // cout << "  ";
-    // print_s(height, i);
-    // cout << "  ";
-    // print_t(height, i);
-    // cout << "  ";
-    // print_u(height, i);
-    // cout << "  ";
+    print_r(height, i);
+    cout << "  ";
+    print_s(height, i);
+    cout << "  ";
+    print_t(height, i);
+    cout << "  ";
+    print_u(height, i);
+    cout << "  ";
     // print_v(height, i);
     // cout << "  ";
     // print_w(height, i);
@@ -222,10 +222,11 @@ void print_h(int h, int i){
 void print_i(int h, int i){
   for (int j = 0; j < h; j++)
   {
+    int mid = (h%2 == 0) ? h/2 -1 : h/2; 
     if(i == 0 or i == h - 1){
       (j%2 == 0) ? cout << "*" : cout << " ";
     }
-    else if(j == h/2){
+    else if(j == mid){
       cout << "*";
     }
     else{
@@ -344,14 +345,21 @@ void print_p(int h, int i){
 void print_q(int h, int i){
   for (int j = 0; j < h; j++)
   {
-    if(()
+    if(i == 0 or i == h/2 + 1) // for top and bottom straight bar
+    { 
+      // for adding spaces at each odd location
+      (j%2 == 0)? cout << "*" : cout << " ";
+    }
+    else if ((j == 0 and i <= h/2 + 1) or // for left straight bar |
+        (j == h - 1 and i <= h/2 + 1) or  // for right straight bar |
+        (i == j and i >= h/2)  /* for tilted bar \ */
 
       )
     {
       cout << "*";
     }
     else{
-      cout << "-";
+      cout << " ";
     }
   }
   
